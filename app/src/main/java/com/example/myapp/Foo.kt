@@ -9,7 +9,7 @@ import androidx.navigation.NavController
 
 context (NestedNavGraphBuilder)
 @Composable
-inline fun <reified VM : ViewModel> sharedViewModel(
+inline fun <reified VM : ViewModel> foo(
     navController: NavController,
     navBackStackEntry: NavBackStackEntry,
 ): VM {
