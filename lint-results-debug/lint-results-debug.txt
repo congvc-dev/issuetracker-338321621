@@ -7,7 +7,7 @@
    the application tag. Since the application has already specified the same
    label, the label on this activity can be omitted.
 
-/Users/congvc/StudioProjects/SAMPLES/MyApplication/app/src/main/java/com/example/myapp/Foo.kt:17: Error: remember calls must not return Unit [RememberReturnType from androidx.compose.runtime]
+/Users/congvc/StudioProjects/SAMPLES/MyApplication/app/src/main/java/com/example/myapp/Foo.kt:16: Error: remember calls must not return Unit [RememberReturnType from androidx.compose.runtime]
     val viewModelStoreOwner = remember(navBackStackEntry) {
                               ~~~~~~~~
 

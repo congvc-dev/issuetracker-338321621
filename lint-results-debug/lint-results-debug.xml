@@ -29,7 +29,7 @@
         errorLine2="                              ~~~~~~~~">
         <location
             file="/Users/congvc/StudioProjects/SAMPLES/MyApplication/app/src/main/java/com/example/myapp/Foo.kt"
-            line="17"
+            line="16"
             column="31"/>
     </issue>
 
