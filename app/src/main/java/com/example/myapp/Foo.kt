@@ -4,18 +4,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
-import androidx.navigation.NavGraphBuilder
-import com.ramcosta.composedestinations.scope.NavGraphBuilderDestinationScope
-import com.ramcosta.composedestinations.spec.NavGraphSpec
 
 context (NestedNavGraphBuilder)
 @Composable
-inline fun <reified VM : ViewModel> NavGraphBuilderDestinationScope<*>.sharedViewModel(
+inline fun <reified VM : ViewModel> sharedViewModel(
     navController: NavController,
+    navBackStackEntry: NavBackStackEntry,
 ): VM {
     val viewModelStoreOwner = remember(navBackStackEntry) {
-        navController.getBackStackEntry(parent.route)
+        navController.getBackStackEntry(route)
     }
 
     return TODO("blob of code")
@@ -23,6 +22,5 @@ inline fun <reified VM : ViewModel> NavGraphBuilderDestinationScope<*>.sharedVie
 
 @Stable
 data class NestedNavGraphBuilder(
-    val navGraphBuilder: NavGraphBuilder,
-    val parent: NavGraphSpec,
+    val route: String,
 )
